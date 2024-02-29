@@ -1,0 +1,16 @@
+body {
+  margin: 0;
+}
+
+body ::-webkit-scrollbar {
+  opacity: 0;
+}
+
+:root {
+  --brown: #e27d5f;
+  --aqua: #85cdcb;
+  --green: #3fb3a3;
+  --pink: #c38d9d;
+  --peach: #e9a77b;
+  --seawave: #7cc2ad;
+}
