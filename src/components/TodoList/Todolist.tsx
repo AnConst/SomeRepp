@@ -1,13 +1,32 @@
-import style from "./TodoList.module.css";
+import { useEffect } from "react";
+import { useTodoStore } from "../../store";
+import TodoItem from "../TodoItem/TodoItem";
+import styles from "./TodoList.module.css";
 
-export default function Todolist() {
-  const mockTodos = [1, 2, 3, 4, 5, 6, 7, 8];
+export function TodoList() {
+  const { todos, getTodosFromStorage, addTodo } = useTodoStore(
+    (state) => state
+  );
+
+  const mockAdding = () => {
+    const newTodo = {
+      title: `${todos.length + 1}`,
+      description: `added todo №${todos.length + 1}`,
+    };
+    addTodo(newTodo);
+    localStorage.setItem("todos", JSON.stringify([...todos, newTodo]));
+  };
+
+  useEffect(() => {
+    getTodosFromStorage();
+  }, []);
 
   return (
-    <div className={style.container}>
-      {mockTodos.map((todo) => (
-        <div className={style.mockblock}>{`${todo}-ая тудушка`}</div>
+    <div className={styles.container} >
+      {todos.map((todo, idx) => (
+        <TodoItem key={idx} title={todo.title} description={todo.description} />
       ))}
+      <button className={styles.button} onClick={mockAdding}>добавить</button>
     </div>
   );
 }

@@ -1,7 +1,6 @@
 .container {
   background-color: var(--green);
-  height: auto;
-  min-height: 100%;
+  height: calc(100vh - 50px);
   display: flex;
   justify-content: start;
   flex-wrap: wrap;
@@ -17,4 +16,12 @@
   align-items: center;
   background-color: var(--peach);
   color: white;
+}
+
+.button {
+  position: absolute;
+  background-color: var(--peach);
+  border: 1px solid white ;
+  top: 15px;
+  left: 10px;
 }

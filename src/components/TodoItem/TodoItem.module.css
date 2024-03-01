@@ -1,0 +1,20 @@
+.blockContainer {
+  width: 340px;
+  height: 100px;
+  background-color: var(--seawave);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  border: 1px solid var(--peach) ;
+}
+
+.blockContainer h4 {
+  margin: 0
+ }
+
+.blockContainer p {
+ margin: 0
+}
