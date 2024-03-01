@@ -1,23 +1,32 @@
+import { useEffect } from "react";
+import { useTodoStore } from "../../store";
 import TodoItem from "../TodoItem/TodoItem";
 import styles from "./TodoList.module.css";
 
 export function TodoList() {
-  const mockTodos = [
-    { title: "1", discription: "number one" },
-    { title: "2", discription: "number wefwefew" },
-    { title: "3", discription: "wefewfew ogewgewgne" },
-    { title: "4", discription: "wefwf o233f44f4fne" },
-    { title: "5", discription: "3f443 onffffe" },
-    { title: "6", discription: "numbefwer onwefefwe" },
-    { title: "7", discription: "number wefwowefwefne" },
-    { title: "8", discription: "numbweffer one" },
-  ];
+  const { todos, getTodosFromStorage, addTodo } = useTodoStore(
+    (state) => state
+  );
+
+  const mockAdding = () => {
+    const newTodo = {
+      title: `${todos.length + 1}`,
+      description: `added todo №${todos.length + 1}`,
+    };
+    addTodo(newTodo);
+    localStorage.setItem("todos", JSON.stringify([...todos, newTodo]));
+  };
+
+  useEffect(() => {
+    getTodosFromStorage();
+  }, []);
 
   return (
-    <div className={styles.container}>
-      {mockTodos.map((todo, idx) => (
-        <TodoItem key={idx} title={todo.title} discription={todo.discription} />
+    <div className={styles.container} >
+      {todos.map((todo, idx) => (
+        <TodoItem key={idx} title={todo.title} description={todo.description} />
       ))}
+      <button className={styles.button} onClick={mockAdding}>добавить</button>
     </div>
   );
 }

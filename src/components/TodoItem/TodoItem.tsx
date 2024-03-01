@@ -1,16 +1,17 @@
+import { useTodoStore } from "../../store";
 import styles from "./TodoItem.module.css";
 
-export default function TodoItem({
-  title,
-  discription,
-}: {
+export default function TodoItem(props: {
   title: string;
-  discription: string;
+  description: string;
 }) {
+  const { deleteTodo } = useTodoStore((state) => state);
+
   return (
     <div className={styles.blockContainer}>
-      <h4>{title}</h4>
-      <p>{discription}</p>
+      <h4>{props.title}</h4>
+      <p>{props.description}</p>
+      <button onClick={() => deleteTodo(props)}>удалить</button>
     </div>
   );
 }

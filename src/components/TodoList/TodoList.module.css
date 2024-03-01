@@ -17,3 +17,11 @@
   background-color: var(--peach);
   color: white;
 }
+
+.button {
+  position: absolute;
+  background-color: var(--peach);
+  border: 1px solid white ;
+  top: 15px;
+  left: 10px;
+}
