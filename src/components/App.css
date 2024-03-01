@@ -6,6 +6,10 @@ body ::-webkit-scrollbar {
   opacity: 0;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 :root {
   --brown: #e27d5f;
   --aqua: #85cdcb;
