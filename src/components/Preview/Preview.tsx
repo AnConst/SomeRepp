@@ -13,6 +13,7 @@ export default function Preview() {
   useEffect(() => {
     const timeOutId = setTimeout(() => {
       setIsOpen(false);
+      localStorage.setItem("isPreviewWasOpened", "true");
     }, 400);
 
     return () => {

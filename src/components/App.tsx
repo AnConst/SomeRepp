@@ -1,14 +1,17 @@
 import Header from "../ds/Header/Header";
 import "./App.css";
 import Preview from "./Preview/Preview";
-import Todolist from "./TodoList/Todolist";
+import { TodoList } from "./TodoList/TodoList";
 
 export function App() {
+
+  const isPreviewWasOpened =  localStorage.getItem("isPreviewWasOpened") === "true"
+
   return (
     <div>
-      <Preview/>
+      {!isPreviewWasOpened && <Preview />}
       <Header />
-      <Todolist/>
+      <TodoList />
     </div>
   );
 }
