@@ -1,0 +1,20 @@
+.container {
+  background-color: var(--green);
+  height: auto;
+  min-height: 100%;
+  display: flex;
+  justify-content: start;
+  flex-wrap: wrap;
+  padding: 10px;
+  gap: 16px;
+}
+
+.mockblock {
+  width: 340px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--peach);
+  color: white;
+}

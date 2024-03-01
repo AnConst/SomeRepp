@@ -1,0 +1,86 @@
+.blockOpen {
+  background-color: var(--seawave);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.blockClose {
+  background-color: var(--seawave);
+  width: 100%;
+  height: 0vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 1000ms ease-in-out;
+  overflow: hidden;
+}
+
+.iconContainer {
+  /* width: 100%;
+  height: 100%; */
+  margin: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  animation-name: rotation;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+    height: 100%;
+    width: 100%;
+  }
+  100% {
+    transform: rotate(360deg);
+    height: 10%;
+    width: 10%;
+  }
+}
+
+.centralRows {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.lastRows {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  animation-name: lastRows;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes lastRows {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+.animatedCenralIcon {
+  animation-name: centraliconrotation;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes centraliconrotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
