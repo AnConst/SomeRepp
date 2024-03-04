@@ -27,26 +27,26 @@ export default function Preview() {
         <div className={styles.lastRows}>
           <CalendarIcon
             size={100}
-            color={MainColors.BROWN}
+            color={MainColors.DARKBLUE}
             className={styles.animatedLastIcon}
           />
         </div>
         <div className={styles.centralRow}>
           <QualityIcon
             size={100}
-            color={MainColors.PINK}
+            color={MainColors.RED}
             className={styles.animatedLastIcon}
           />
 
           <LaptopIcon
             size={200}
-            color={MainColors.PINK}
+            color={MainColors.RED}
             className={styles.animatedCenralIcon}
           />
 
           <GearIcon
             size={100}
-            color={MainColors.PEACH}
+            color={MainColors.RED}
             className={styles.animatedLastIcon}
           />
         </div>
@@ -54,7 +54,7 @@ export default function Preview() {
           <div className={styles.animatedLastIcon}>
             <TimerIcon
               size={100}
-              color={MainColors.BROWN}
+              color={MainColors.DARKBLUE}
               className={styles.animatedLastIcon}
             />
           </div>

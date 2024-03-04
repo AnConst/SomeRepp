@@ -1,20 +1,65 @@
-.blockContainer {
+.blockContainerWithoutHover,
+.blockContainerWithHover {
   width: 340px;
   height: 100px;
-  background-color: var(--seawave);
-  color: white;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   border-radius: 10px;
-  border: 1px solid var(--peach) ;
+  overflow: hidden;
+  cursor: pointer;
 }
 
-.blockContainer h4 {
-  margin: 0
- }
+.blockContainerWithoutHover {
+  border: 1px solid var(--gold);
+}
 
-.blockContainer p {
- margin: 0
+.blockContainerWithHover {
+  border: 1px solid var(--darkblue);
+}
+
+.titleWithoutHover,
+.titleWithHover {
+  margin: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.titleWithoutHover {
+  color: var(--darkblue);
+  background-color: var(--gold);
+}
+
+.titleWithHover {
+  color: var(--milk);
+  background-color: var(--darkblue);
+}
+
+.blockBody {
+  background-color: var(--cotton);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.blockBody p {
+  margin: 0;
+  color: var(--darkblue);
+  text-align: center;
+}
+
+.blockBody button {
+  height: 24px;
+  background-color: var(--cotton);
+  color: var(--gold);
+  width: 100%;
+  border: 0;
+  cursor: pointer;
+  border-top: 1px solid var(--gold);
+}
+
+.blockBody button:hover {
+  background-color: var(--red);
+  color: var(--milk);
 }
