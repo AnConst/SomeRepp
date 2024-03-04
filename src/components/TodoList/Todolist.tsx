@@ -14,7 +14,6 @@ export function TodoList() {
       description: `added todo №${todos.length + 1}`,
     };
     addTodo(newTodo);
-    localStorage.setItem("todos", JSON.stringify([...todos, newTodo]));
   };
 
   useEffect(() => {
@@ -26,7 +25,6 @@ export function TodoList() {
       {todos.map((todo, idx) => (
         <TodoItem key={idx} title={todo.title} description={todo.description} />
       ))}
-      <button className={styles.button} onClick={mockAdding}>добавить</button>
     </div>
   );
 }

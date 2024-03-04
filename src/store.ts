@@ -26,10 +26,14 @@ export const useTodoStore = create<TState>((set, get) => ({
     const todos = JSON.parse(json);
     set({ todos });
   },
-  addTodo: (todo) => set((state) => ({ todos: [...state.todos, todo] })),
-  deleteTodo: (todo) => {
+  addTodo: (todo) => {
     const { todos } = get();
-    const filteredState = todos.filter((el) => el.title !== todo.title);
-    set({ todos: filteredState });
+    set({ todos: [...todos, todo] });
+    localStorage.setItem("todos", JSON.stringify(get().todos));
+  },
+  deleteTodo: (todo) => {
+    const filteredTodos = get().todos.filter((el) => el.title !== todo.title);
+    set({ todos: filteredTodos });
+    localStorage.setItem("todos", JSON.stringify(get().todos));
   },
 }));
