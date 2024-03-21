@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "vite"
+    "start": "vite"
   },
   "author": "Costa",
   "license": "ISC",
@@ -15,8 +15,11 @@
     "vite": "^5.1.4"
   },
   "dependencies": {
+    "@types/react-speech-recognition": "^3.9.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-speech-recognition": "^3.10.0",
+    "regenerator-runtime": "^0.14.1",
     "tesseract.js": "^5.0.5",
     "zustand": "^4.5.1"
   }
